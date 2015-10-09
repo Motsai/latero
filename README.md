@@ -1,5 +1,5 @@
 #Latero V2 Instruction Manual
-###*For firmware version 2.2.4*
+###*For firmware version 2.2.5*
 ##Latero PC Software
 The Latero V2 controller is compatible with only the motsai branch of the repository on [Jerome Pasquero's gitlab](https://gitlab.com/u/jerome.pasquero). This means that when you clone the software on your computer, you must checkout the motsai branch before compiling and running the software. Those files come from a public project derived from the Latero work at Tactile Labs.
 
@@ -35,7 +35,7 @@ The HV (High Voltage) LED represents the state of the 200V and 100V supply lines
 The EXP LED blinking indicates activity on the expansion connector. This LED is currently green by default in this firmware version.
 
 ##Performing a system update
-Performing a system update is relatively straightforward. When the box is unpowered, connect a micro-USB cable from the PC to the prog USB port of the controller box. On the PC, a file explorer window title mbed will pop-up as if a flash drive had been connected. Drag and drop the firmware **laterov2_FW2-2-4_FPGA2-2-5.bin** *(for v2.2.4)* file into the window and wait until the file transfer has ended. When the mbed window pops up again it means the transfer is complete. You can disconnect the USB cable and restart the power on the 12V input jack.
+Performing a system update is relatively straightforward. When the box is unpowered, connect a micro-USB cable from the PC to the prog USB port of the controller box. On the PC, a file explorer window title mbed will pop-up as if a flash drive had been connected. Drag and drop the firmware **laterov2_FW2-2-5_FPGA2-2-5.bin** *(for v2.2.5)* file into the window and wait until the file transfer has ended. When the mbed window pops up again it means the transfer is complete. You can disconnect the USB cable and restart the power on the 12V input jack.
 
 ##Overcurrent events
 One of the main security features of the Latero controller is the current limiter. An overcurrent event occurs when the perceived current going through the high voltage circuit is a lot higher than expected (this would happen in the event of a short circuit or someone closing the circuit with their body). When this happens, the system automatically opens up the circuit feeding the high voltage booster, which immediately cuts off the high voltage power supply. The system can’t recover from this by itself, and you would need to perform an On-Off (5 second pause between the on and off) sequence with the back buttons.

@@ -3,12 +3,12 @@
 ##Latero PC Software
 The Latero V2 controller is compatible with only the motsai branch of the repository on Jerome Pasquero's gitlab. This means that when you clone the software on your computer, you must checkout the motsai branch before compiling and running the software.
 ##Using the Latero Controller
-1.Plug the box into a 12V DC 1.5 Amp Power supply.
-2.Press the power button to the ‘ON’ position.
-3.At the time of startup, the STAT LED should turn orange. This means that the system is booting up. 
-4.Once it is done booting up, the LED should turn either red if the head is disconnected from the box, or green if the head was connected.
-5.If the tactile head was not connected, now is the time to connect it.
-6.When the tactile head is connected, you can start the latero program on the PC. The IP address of the destio
+1. Plug the box into a 12V DC 1.5 Amp Power supply.
+2. Press the power button to the ‘ON’ position.
+3. At the time of startup, the STAT LED should turn orange. This means that the system is booting up. 
+4. Once it is done booting up, the LED should turn either red if the head is disconnected from the box, or green if the head was connected.
+5. If the tactile head was not connected, now is the time to connect it.
+6. When the tactile head is connected, you can start the latero program on the PC. The IP address of the destio
 
 ##Indication LEDs
 ###STAT

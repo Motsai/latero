@@ -1,5 +1,8 @@
-#Latero V2 Instruction Manual
+#Latero V2 Instructions
 ###*For firmware version 2.2.5*
+
+![Latero whole setup](http://i.imgur.com/I7360KQ.jpg)
+
 ##Latero PC Software
 The Latero V2 controller is compatible with only the motsai branch of the repository on [Jerome Pasquero's gitlab](https://gitlab.com/u/jerome.pasquero). This means that when you clone the software on your computer, you must checkout the motsai branch before compiling and running the software. Those files come from a public project derived from the Latero work at Tactile Labs.
 
@@ -16,6 +19,8 @@ It is however possible to extend the protocol.  In such case, a new packet type 
 6. When the tactile head is connected, you can start the latero program on the PC. The IP address of the destio
 
 ##Indication LEDs
+![Latero front](http://i.imgur.com/5UgTBS7.jpg)
+![Latero whole setup](http://i.imgur.com/AUoiy9v.jpg)
 ###STAT
 The status LED gives out information about the state of the whole system. 
 * **Orange (on startup)**: The system is booting up

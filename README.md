@@ -1,7 +1,7 @@
 #Latero V2 Instruction Manual
 ###*For firmware version 2.2.4*
 ##Latero PC Software
-The Latero V2 controller is compatible with only the motsai branch of the repository on Jerome Pasquero's gitlab. This means that when you clone the software on your computer, you must checkout the motsai branch before compiling and running the software.
+The Latero V2 controller is compatible with only the motsai branch of the repository on [Jerome Pasquero's gitlab](https://gitlab.com/u/jerome.pasquero). This means that when you clone the software on your computer, you must checkout the motsai branch before compiling and running the software.
 ##Using the Latero Controller
 1. Plug the box into a 12V DC 1.5 Amp Power supply.
 2. Press the power button to the ‘ON’ position.

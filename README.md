@@ -1,7 +1,12 @@
 #Latero V2 Instruction Manual
 ###*For firmware version 2.2.4*
 ##Latero PC Software
-The Latero V2 controller is compatible with only the motsai branch of the repository on [Jerome Pasquero's gitlab](https://gitlab.com/u/jerome.pasquero). This means that when you clone the software on your computer, you must checkout the motsai branch before compiling and running the software.
+The Latero V2 controller is compatible with only the motsai branch of the repository on [Jerome Pasquero's gitlab](https://gitlab.com/u/jerome.pasquero). This means that when you clone the software on your computer, you must checkout the motsai branch before compiling and running the software. Those files come from a public project derived from the Latero work at Tactile Labs.
+
+The protocol files should be kept as-is and avoid any changes in the protocol to keep things compatible with other work.
+
+It is however possible to extend the protocol.  In such case, a new packet type should be created and that packet type should be added the the latero_io.h file along with the unpack/pack methods. Changes to the protocol should be made public to help everyone.
+
 ##Using the Latero Controller
 1. Plug the box into a 12V DC 1.5 Amp Power supply.
 2. Press the power button to the ‘ON’ position.

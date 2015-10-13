@@ -9,15 +9,24 @@
 There are build tools required to be able to build and run the Latero software. You should have:
 + POSIX-compatible operating system (OS X Or Linux)
 + GCC and its associated C libraries
-+ libargtable2
++ libargtable2 (if you don't have this don't worry, it is present in this repo)
 
 Start by cloning the git repository onto your computer:
 ```
 git clone https://github.com/Motsai/latero.git
 ```
-Next, go to the directory with the makefile and run the makefile to build the client.
+
+If you do not have the argtable2 library installed on your computer, you can install the one that is included in this repository. 
 ```
-cd latero/latero_sw_c/
+cd latero/latero_sw_c/argtable2-13
+./configure
+sudo make install
+make clean
+```
+
+Next, go to the directory with the code and makefile and run the makefile to build the client.
+```
+cd ..
 make client
 ```
 Assuming you have all the necessary libraries, the output of the console should look a little bit like this:
@@ -32,6 +41,13 @@ Make sure the Latero controller is up and running according to instructions. Now
 
 **Note**: The software has not been tested to work with Windows. It might be possible to hack it together using cygwin.
 
+##Starting up the Latero Controller box
+1. Plug the box into a 12V DC 1.5 Amp Power supply.
+2. Press the power button to the 'ON' position.
+3. At the time of startup, the STAT LED should turn orange. This means that the system is booting up. 
+4. Once it is done booting up, the LED should turn either red if the head is disconnected from the box, or green if the head was connected.
+5. If the tactile head was not connected, now is the time to connect it.
+6. When the tactile head is connected, you can start the latero program on the PC.
 
 ##Communicating with the Latero
 ###Communication through Ethernet
@@ -42,13 +58,6 @@ The protocol files should be kept as-is to avoid breaking communication between 
 
 **Note**: This repository is not officially maintained by Motsai. If you have requests for additional features or issues with the software, it should be addressed to the official maintainers of that software.
 
-##Starting up the Latero Controller box
-1. Plug the box into a 12V DC 1.5 Amp Power supply.
-2. Press the power button to the 'ON' position.
-3. At the time of startup, the STAT LED should turn orange. This means that the system is booting up. 
-4. Once it is done booting up, the LED should turn either red if the head is disconnected from the box, or green if the head was connected.
-5. If the tactile head was not connected, now is the time to connect it.
-6. When the tactile head is connected, you can start the latero program on the PC.
 
 ##Indication LEDs
 ![Latero front](http://i.imgur.com/5UgTBS7.jpg)

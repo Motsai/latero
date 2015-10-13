@@ -25,6 +25,10 @@ cd argtable2-13
 sudo make install
 make clean
 ```
+Alternatively, Ubuntu users can simply do 
+```
+sudo apt-get install libargtable2-dev
+```
 
 Next, go to the directory with the code and makefile and run the makefile to build the client.
 ```

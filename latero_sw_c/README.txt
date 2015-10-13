@@ -11,10 +11,9 @@ remote station natively compiled.
 Building the client (Linux or Mac OS X on the command line)
 **********
 
-
 1- Uncompress the argtable library archive.  
-$ tar xzvf argtable2-12.tar.gz
-$ cd argtable2-12
+$ tar xzvf argtable2-13.tar
+$ cd argtable2-13
 $ ./configure
 $ make
 $ sudo make install
@@ -112,12 +111,4 @@ pkt->fullr.adc[3]=0x0015 (0.001313 Volts)
 
 
 This can happen if the latero controller has been idle for a long time and the controller went in low-power mode.  A second connection attempt will not result in a timeout.  The timeouts are very short (you can change that in the source code).  The network connection should ideally be direct from the computer to the latero using a cross Ethernet cable or via a single switch that does not add latency to the network.
-
-
-*********
-Updating the server (on the Latero controller)
-*********
-
-See the UPDATE_SERVER.txt file
-
 

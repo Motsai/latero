@@ -4,7 +4,7 @@
 ![Latero whole setup](http://i.imgur.com/I7360KQ.jpg)
 
 <!-- ##Getting started with the Latero -->
-##Compiling and running the PC software
+##Compiling the PC software
 
 There are build tools required to be able to build and run the Latero software. You should have:
 + POSIX-compatible operating system (OS X Or Linux)
@@ -36,10 +36,6 @@ Assuming you have all the necessary libraries, the output of the console should 
 gcc -I../protocol    -c -o lat_client_api.o lat_client_api.c
 gcc -I../protocol  latero_testpattern.c latero_client.c utils.c lat_client_api.o -largtable2 -lm -o client
 ```
-Make sure the Latero controller is up and running according to instructions. Now, you can run the PC software with a given test pattern:
-```
-./client --latero_ip=192.168.98 -t 1
-```
 
 **Note**: The software has not been tested to work with Windows. It might be possible to hack it together using cygwin.
 
@@ -52,6 +48,15 @@ Make sure the Latero controller is up and running according to instructions. Now
 6. When the tactile head is connected, you can start the latero program on the PC.
 
 ##Communicating with the Latero
+
+###Running the application
+Make sure the Latero controller is up and running according to instructions and connected to the PC by an ethernet cable. Now, you can run the PC software with a given test pattern:
+```
+./client --latero_ip=192.168.98 -t 1
+```
+
+![Latero ethernet](http://i.imgur.com/Q8nIJVd.jpg)
+
 ###Communication through Ethernet
 Communication with the Latero controller is done through an ethernet interface using UDP packets. It is recommended that the ethernet connection be directly from the PC to the controller, as opposed to routing it through a network. Communicating with the controller through your local LAN may work, but it will negatively affect the response time by adding either jitter or latency (or both).
 
@@ -63,7 +68,6 @@ The protocol files should be kept as-is to avoid breaking communication between 
 
 ##Indication LEDs
 ![Latero front](http://i.imgur.com/5UgTBS7.jpg)
-![Latero whole setup](http://i.imgur.com/AUoiy9v.jpg)
 ###STAT
 The status LED gives out information about the state of the whole system. 
 * **Orange (on startup)**: The system is booting up

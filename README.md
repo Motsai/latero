@@ -18,7 +18,9 @@ git clone https://github.com/Motsai/latero.git
 
 If you do not have the argtable2 library installed on your computer, you can install the one that is included in this repository. 
 ```
-cd latero/latero_sw_c/argtable2-13
+cd latero/latero_sw_c
+tar -xvf argtable2-13.tar
+cd argtable2-13
 ./configure
 sudo make install
 make clean

@@ -3,20 +3,52 @@
 
 ![Latero whole setup](http://i.imgur.com/I7360KQ.jpg)
 
-##Latero PC Software
-The Latero V2 controller is compatible with only the motsai branch of the repository on [Jerome Pasquero's gitlab](https://gitlab.com/u/jerome.pasquero). This means that when you clone the software on your computer, you must checkout the motsai branch before compiling and running the software. Those files come from a public project derived from the Latero work at Tactile Labs.
+<!-- ##Getting started with the Latero -->
+##Compiling and running the PC software
 
-The protocol files should be kept as-is and avoid any changes in the protocol to keep things compatible with other work.
+There are build tools required to be able to build and run the Latero software. You should have:
++ POSIX-compatible operating system (OS X Or Linux)
++ GCC and its associated C libraries
++ libargtable2
 
-It is however possible to extend the protocol.  In such case, a new packet type should be created and that packet type should be added the the latero_io.h file along with the unpack/pack methods. Changes to the protocol should be made public to help everyone.
+Start by cloning the git repository onto your computer:
+```
+git clone https://github.com/Motsai/latero.git
+```
+Next, go to the directory with the makefile and run the makefile to build the client.
+```
+cd latero/latero_sw_c/
+make client
+```
+Assuming you have all the necessary libraries, the output of the console should look a little bit like this:
+```
+gcc -I../protocol    -c -o lat_client_api.o lat_client_api.c
+gcc -I../protocol  latero_testpattern.c latero_client.c utils.c lat_client_api.o -largtable2 -lm -o client
+```
+Make sure the Latero controller is up and running according to instructions. Now, you can run the PC software with a given test pattern:
+```
+./client --latero_ip=192.168.98 -t 1
+```
 
-##Using the Latero Controller
+**Note**: The software has not been tested to work with Windows. It might be possible to hack it together using cygwin.
+
+
+##Communicating with the Latero
+###Communication through Ethernet
+Communication with the Latero controller is done through an ethernet interface using UDP packets. It is recommended that the ethernet connection be directly from the PC to the controller, as opposed to routing it through a network. Communicating with the controller through your local LAN may work, but it will negatively affect the response time by adding either jitter or latency (or both).
+
+###Protocol files
+The protocol files should be kept as-is to avoid breaking communication between the controller and the PC. Any changes made by Motsai in the protocol from the firmware side will be documented.
+
+**Note**: This repository is not officially maintained by Motsai. If you have requests for additional features or issues with the software, it should be addressed to the official maintainers of that software.
+
+##Starting up the Latero Controller box
 1. Plug the box into a 12V DC 1.5 Amp Power supply.
-2. Press the power button to the ‘ON’ position.
+2. Press the power button to the 'ON' position.
 3. At the time of startup, the STAT LED should turn orange. This means that the system is booting up. 
 4. Once it is done booting up, the LED should turn either red if the head is disconnected from the box, or green if the head was connected.
 5. If the tactile head was not connected, now is the time to connect it.
-6. When the tactile head is connected, you can start the latero program on the PC. The IP address of the destio
+6. When the tactile head is connected, you can start the latero program on the PC.
 
 ##Indication LEDs
 ![Latero front](http://i.imgur.com/5UgTBS7.jpg)
@@ -24,7 +56,7 @@ It is however possible to extend the protocol.  In such case, a new packet type 
 ###STAT
 The status LED gives out information about the state of the whole system. 
 * **Orange (on startup)**: The system is booting up
-* **Orange (during runtime):** An overcurrent event has occurred
+* **Orange (during runtime)**: An overcurrent event has occurred
 * **Red**: Either the tactile head cable is not connected or a fatal error has occurred.
 * **Green**: The controller is ready to accept new input 
 
@@ -47,3 +79,6 @@ One of the main security features of the Latero controller is the current limite
 
 ##In case of a system crash, freeze
 The Latero controller system is still under heavy development. It may still (occasionally) fail under certain conditions. When this happens, perform a system reboot, by putting the switch to ‘Off’, wait 5 seconds, and press ‘On’ again.
+
+##Latero Mac OS X GUI Software
+Some developers may want to develop applications based on the Latero GUI software developed for an OS X runtime. This particular software is available on [Jerome Pasquero's gitlab](https://gitlab.com/u/jerome.pasquero). The Latero V2 controller is compatible with only the motsai branch of that repository. This means that when you clone the software on your computer, you must checkout the motsai branch before compiling and running the software. Those files come from a public project derived from the Latero work at Tactile Labs.

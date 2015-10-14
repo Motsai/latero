@@ -67,9 +67,6 @@ Communication with the Latero controller is done through an ethernet interface u
 ###Protocol files
 The protocol files should be kept as-is to avoid breaking communication between the controller and the PC. Any changes made by Motsai in the protocol from the firmware side will be documented.
 
-**Note**: This repository is not officially maintained by Motsai. If you have requests for additional features or issues with the software, it should be addressed to the official maintainers of that software.
-
-
 ##Indication LEDs
 ![Latero front](http://i.imgur.com/5UgTBS7.jpg)
 ###STAT
@@ -102,3 +99,6 @@ The Latero controller system is still under heavy development. It may still (occ
 
 ##Latero Mac OS X GUI Software
 Some developers may want to develop applications based on the Latero GUI software developed for an OS X runtime. This particular software is available on [Jerome Pasquero's gitlab](https://gitlab.com/u/jerome.pasquero). The Latero V2 controller is compatible with only the motsai branch of that repository. This means that when you clone the software on your computer, you must checkout the motsai branch before compiling and running the software. Those files come from a public project derived from the Latero work at Tactile Labs.
+
+**Note**: The gitlab repository is not officially maintained by Motsai. If you have requests for additional features or issues with the software, it should be addressed to the official maintainers of that software.
+

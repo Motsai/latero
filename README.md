@@ -56,16 +56,16 @@ gcc -I../protocol  latero_testpattern.c latero_client.c utils.c lat_client_api.o
 ###Running the application
 Make sure the Latero controller is up and running according to instructions and connected to the PC by an ethernet cable. Now, you can run the PC software with a given test pattern:
 ```
-./client --latero_ip=192.168.98 -t 1
+./client --latero_ip=192.168.87.98 -t 1
 ```
 
 ![Latero ethernet](http://i.imgur.com/Q8nIJVd.jpg)
 
 ###Communication through Ethernet
-Communication with the Latero controller is done through an ethernet interface using UDP packets. It is recommended that the ethernet connection be directly from the PC to the controller, as opposed to routing it through a network. Communicating with the controller through your local LAN may work, but it will negatively affect the response time by adding either jitter or latency (or both).
+Communication with the Latero controller is done through an ethernet interface using UDP packets. It is recommended that the ethernet connection be directly from the PC to the controller, as opposed to routing it through a network. Communicating with the controller through your local LAN may work, but it will negatively affect the response time by adding either jitter and/or latency.
 
 ###Protocol files
-The protocol files should be kept as-is to avoid breaking communication between the controller and the PC. Any changes made by Motsai in the protocol from the firmware side will be documented.
+The protocol files should be kept as-is to avoid breaking communication between the controller and the PC. Any changes made by Motsai in the protocol from the firmware side will be documented and updated accordingly.
 
 ##Indication LEDs
 ![Latero front](http://i.imgur.com/5UgTBS7.jpg)

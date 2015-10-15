@@ -1,3 +1,16 @@
+#What is a Latero ?
+The Latero is the name that was given from a project done under the supervision of Prof. Vincent Hayward at McGill University in Montreal.  The aim of this work was to develop the illusion of little tactile dots pushing against the finger pad, but only using lateral skin deformation and leveraging the way the brain interpret the skin deformation.
+
+![The original work behind the Laterotactile controller](http://www.cim.mcgill.ca/~haptic/laterotactile/index.php)
+
+The original devices required a rather bulky setup of high-voltage power supply to drive the piezoelectric bimorph benders along with a PC with rather complex real-time control cards.  The team at Motsai has worked over the years to miniaturize the technology to a point where the complete system can be easily driven with a laptop and only requires a small control box that includes all the critical components to drive the piezoelectric bender array.
+
+The controller leverages FPGA logic to ensure accurate real-time refresh of the tactile blades and proper powering sequences to the high-voltage amplifiers.  The Latero Controller has been augmented in this 2nd overhaul with a complete acquisition system in a way that can be used to time correlate force sensors, quadrature encoders and output real-time voltage that is correlated with the motion of the tactile blades.  While not exactly designed for home use (its really a research instruments), we feel that there is certainly many uses of the technology that could be used to improve the lives of some visually impaired individuals (Braille displays) for example.
+
+Motsai does not distribute or sell this unit directly.  To get more information, interested parties should contact ![Tactile Labs](http://www.tactilelabs.com)
+
+Motsai would be happy to discuss with potential customers interested in real-time control of piezoelectric elements (up to 64 simultaneous channels at 200V).  There are few systems on the market that can drive so many channels economically. 
+
 #Latero V2 Instructions
 ###*For firmware version 2.2.5*
 

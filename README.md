@@ -101,7 +101,7 @@ The HV (High Voltage) LED represents the state of the 200V and 100V supply lines
 The EXP LED blinking indicates activity on the expansion connector. This LED is currently green by default in this firmware version.
 
 ##Performing a system update
-Performing a system update is relatively straightforward. When the box is unpowered, connect a micro-USB cable from the PC to the prog USB port of the controller box. On the PC, a file explorer window title mbed will pop-up as if a flash drive had been connected. Drag and drop the firmware **laterov2_FW2-2-5_FPGA2-2-5.bin** *(for v2.2.5)* file into the window and wait until the file transfer has ended. When the mbed window pops up again it means the transfer is complete. You can disconnect the USB cable and restart the power on the 12V input jack.
+Performing a system update is relatively straightforward. When the box is unpowered, connect a micro-USB cable from the PC to the prog USB port of the controller box. On the PC, a file explorer window title mbed will pop-up as if a flash drive had been connected. Drag and drop the firmware **laterov2_FW2-2-6_FPGA2-2-5.bin** *(for v2.2.6)* file into the window and wait until the file transfer has ended. When the mbed window pops up again it means the transfer is complete. You can disconnect the USB cable and restart the power on the 12V input jack.
 ![SystemUpdate](http://i.imgur.com/TyVFInp.png)
 
 ##Overcurrent events

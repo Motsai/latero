@@ -12,7 +12,7 @@ Motsai does not distribute or sell this unit directly.  To get more information,
 Motsai would be happy to discuss with potential customers interested in real-time control of piezoelectric elements (up to 64 simultaneous channels at 200V).  There are few systems on the market that can drive so many channels economically. 
 
 #Latero V2 Instructions
-###*For firmware version 2.2.5*
+###*For firmware version 2.3.4*
 
 ![Latero whole setup](http://i.imgur.com/I7360KQ.jpg)
 
@@ -101,7 +101,8 @@ The HV (High Voltage) LED represents the state of the 200V and 100V supply lines
 The EXP LED blinking indicates activity on the expansion connector. This LED is currently green by default in this firmware version.
 
 ##Performing a system update
-Performing a system update is relatively straightforward. When the box is unpowered, connect a micro-USB cable from the PC to the prog USB port of the controller box. On the PC, a file explorer window title mbed will pop-up as if a flash drive had been connected. Drag and drop the firmware **laterov2_FW2-2-6_FPGA2-2-5.bin** *(for v2.2.6)* file into the window and wait until the file transfer has ended. When the mbed window pops up again it means the transfer is complete. You can disconnect the USB cable and restart the power on the 12V input jack.
+Performing a system update is relatively straightforward. When the box is unpowered, connect a micro-USB cable from the PC to the prog USB port of the controller box. On the PC, a file explorer window title mbed will pop-up as if a flash drive had been connected. Drag and drop the firmware [latest here](https://github.com/Motsai/latero/tree/master/firmware_bin) file into the window and wait until the file transfer has ended. When the mbed window pops up again it means the transfer is complete. You can disconnect the USB cable and restart the power on the 12V input jack.
+
 ![SystemUpdate](http://i.imgur.com/TyVFInp.png)
 
 ##Overcurrent events

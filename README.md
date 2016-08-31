@@ -108,8 +108,13 @@ Performing a system update is relatively straightforward. When the box is unpowe
 ##Overcurrent events
 One of the main security features of the Latero controller is the current limiter. An overcurrent event occurs when the perceived current going through the high voltage circuit is a lot higher than expected (this would happen in the event of a short circuit or someone closing the circuit with their body). When this happens, the system automatically opens up the circuit feeding the high voltage booster, which immediately cuts off the high voltage power supply. The system can’t recover from this by itself, and you would need to perform an On-Off (5 second pause between the on and off) sequence with the back buttons.
 
-##In case of a system crash, freeze
-The Latero controller system is still under heavy development. It may still (occasionally) fail under certain conditions. When this happens, perform a system reboot, by putting the switch to ‘Off’, wait 5 seconds, and press ‘On’ again.
+##In case of a system hang
+
+First and foremost, ensure that you run the latest firmware (V2.3.4 and above) as prior versions had a problem that caused the Latero to hang.
+
+You can know your firmware version by attaching a USB cable to the Latero via the PROG input and Apply power to the box.  You can connect with a terminal emulator set for 115200-N-8-1 (e.g. TeraTerm) and look at the menu.  Press the space bar to get the menu.  Note that this menu system is not meant to run while using the Latero and you should not have the tactile head installed when attempting to use this menu.  Test entries in the menu should not be used as they are for factory testing and diagnostic only.
+
+Verify that your network does not 'drop' UDP packets, try it with a cross cable and with the test code provided.  On lossy network, the communication may stop responding, depending on how your code handles dropped responses.
 
 ##Latero Mac OS X GUI Software
 Some developers may want to develop applications based on the Latero GUI software developed for an OS X runtime. This particular software is available on [Jerome Pasquero's gitlab](https://gitlab.com/u/jerome.pasquero). The Latero V2 controller is compatible with only the motsai branch of that repository. This means that when you clone the software on your computer, you must checkout the motsai branch before compiling and running the software. Those files come from a public project derived from the Latero work at Tactile Labs.
